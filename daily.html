@@ -10,7 +10,16 @@
         @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
 
-        body {
+        object {
+            display: inline;
+        }
+
+        body{
+            margin: 0;
+            padding: 0;
+        }
+
+        .a5 {
             background: white;
             width: 14.8cm;
             height: 21cm;
@@ -18,7 +27,7 @@
             margin: 0;
             padding: 0.5cm;
             box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
-            overflow-y: scroll;
+            overflow: hidden;
             box-sizing: border-box;
         }
 
@@ -175,15 +184,23 @@
         }
 
         @media print {
-            size: A5 portrait;
-        }
+            @page{
+                size: A5 portrait;
+                margin: 0;
+            }
 
-        @media print {
+            object {
+                display: inline!important;
+            }
+
+            .a5{
+                box-shadow: none;
+            }
+
             body {
                 margin: 0;
                 padding: 0;
 
-                box-shadow: none;
                 margin: 0;
                 width: auto;
                 height: auto;
@@ -193,127 +210,129 @@
 
 </head>
 <body>
-    <header class="header">
-        <div class="date">
-            <div class="date__row">
-                <div class="date__underline">
-                    <span class="date__space"></span><i class="date__dash">/</i><span class="date__space"></span><i class="date__dash">/</i><span class="date__space"></span>
+    <div class="a5">
+        <header class="header">
+            <div class="date">
+                <div class="date__row">
+                    <div class="date__underline">
+                        <span class="date__space"></span><i class="date__dash">/</i><span class="date__space"></span><i class="date__dash">/</i><span class="date__space"></span>
+                    </div>
                 </div>
+                <div class="date__days">SU&nbsp;&nbsp;MO&nbsp;&nbsp;TU&nbsp;&nbsp;WE&nbsp;&nbsp;TH&nbsp;&nbsp;FR&nbsp;&nbsp;SA</div>
             </div>
-            <div class="date__days">SU&nbsp;&nbsp;MO&nbsp;&nbsp;TU&nbsp;&nbsp;WE&nbsp;&nbsp;TH&nbsp;&nbsp;FR&nbsp;&nbsp;SA</div>
-        </div>
-        <h1 class="header__title">My day</h1>
-    </header>
-    <div class="container">
-        <div class="column timetable">
-            <h3 class="column__title title">Расписание</h3>
-            <hr/>
-            <hr/>
-            <hr/>
-            <hr/>
-            <hr/>
-            <hr/>
-            <hr/>
-            <hr/>
-            <hr/>
-            <hr/>
-            <hr/>
-            <hr/>
-            <hr/>
-            <hr/>
-            <hr/>
-            <hr/>
-            <hr/>
-            <hr/>
-        </div>
-        <div class="column mood">
-            <span class="title">Настроение</span>
-            <object class="mood__face" type="image/svg+xml" data="005-relaxed.svg"></object>
-            <object class="mood__face" type="image/svg+xml" data="002-love.svg"></object>
-            <object class="mood__face" type="image/svg+xml" data="003-confused.svg"></object>
-            <object class="mood__face" type="image/svg+xml" data="004-sad.svg"></object>
-            <object class="mood__face" type="image/svg+xml" data="001-swearing.svg"></object>
-            <object class="mood__face" type="image/svg+xml" data="006-crying.svg"></object>
-        </div>
-        <div class="column priorities">
-            <h3 class="column__title title">Приоритеты</h3>
-            <ul>
-                <li>
-                    <input type="checkbox"/>
-                </li>
-                <li>
-                    <input type="checkbox"/>
-                </li>
-                <li>
-                    <input type="checkbox"/>
-                </li>
-                <li>
-                    <input type="checkbox"/>
-                </li>
-                <li>
-                    <input type="checkbox"/>
-                </li>
-            </ul>
+            <h1 class="header__title">My day</h1>
+        </header>
+        <div class="container">
+            <div class="column timetable">
+                <h3 class="column__title title">Расписание</h3>
+                <hr/>
+                <hr/>
+                <hr/>
+                <hr/>
+                <hr/>
+                <hr/>
+                <hr/>
+                <hr/>
+                <hr/>
+                <hr/>
+                <hr/>
+                <hr/>
+                <hr/>
+                <hr/>
+                <hr/>
+                <hr/>
+                <hr/>
+                <hr/>
+            </div>
+            <div class="column mood">
+                <span class="title">Настроение</span>
+                <object class="mood__face" type="image/svg+xml" data="005-relaxed.svg"></object>
+                <object class="mood__face" type="image/svg+xml" data="002-love.svg"></object>
+                <object class="mood__face" type="image/svg+xml" data="003-confused.svg"></object>
+                <object class="mood__face" type="image/svg+xml" data="004-sad.svg"></object>
+                <object class="mood__face" type="image/svg+xml" data="001-swearing.svg"></object>
+                <object class="mood__face" type="image/svg+xml" data="006-crying.svg"></object>
+            </div>
+            <div class="column priorities">
+                <h3 class="column__title title">Приоритеты</h3>
+                <ul>
+                    <li>
+                        <input type="checkbox"/>
+                    </li>
+                    <li>
+                        <input type="checkbox"/>
+                    </li>
+                    <li>
+                        <input type="checkbox"/>
+                    </li>
+                    <li>
+                        <input type="checkbox"/>
+                    </li>
+                    <li>
+                        <input type="checkbox"/>
+                    </li>
+                </ul>
 
+            </div>
+            <div class="column tobuy">
+                <h3 class="column__title title">Купить</h3>
+                <ul>
+                    <li>
+                        <input type="checkbox"/>
+                    </li>
+                    <li>
+                        <input type="checkbox"/>
+                    </li>
+                    <li>
+                        <input type="checkbox"/>
+                    </li>
+                    <li>
+                        <input type="checkbox"/>
+                    </li>
+                    <li>
+                        <input type="checkbox"/>
+                    </li>
+                    <li>
+                        <input type="checkbox"/>
+                    </li>
+                    <li>
+                        <input type="checkbox"/>
+                    </li>
+                </ul>
+            </div>
+            <div class="column habits">
+                <h3 class="column__title title">Полезные привычки</h3>
+                <ul>
+                    <li>
+                        <input type="checkbox"/>
+                    </li>
+                    <li>
+                        <input type="checkbox"/>
+                    </li>
+                    <li>
+                        <input type="checkbox"/>
+                    </li>
+                    <li>
+                        <input type="checkbox"/>
+                    </li>
+                </ul>
+            </div>
+            <div class="column water">
+                <span class="title">Вода</span>
+                <object class="water__drop" type="image/svg+xml" data="drop.svg"></object>
+                <object class="water__drop" type="image/svg+xml" data="drop.svg"></object>
+                <object class="water__drop" type="image/svg+xml" data="drop.svg"></object>
+                <object class="water__drop" type="image/svg+xml" data="drop.svg"></object>
+                <object class="water__drop" type="image/svg+xml" data="drop.svg"></object>
+                <object class="water__drop" type="image/svg+xml" data="drop.svg"></object>
+                <object class="water__drop" type="image/svg+xml" data="drop.svg"></object>
+                <object class="water__drop" type="image/svg+xml" data="drop.svg"></object>
+                <object class="water__drop" type="image/svg+xml" data="drop.svg"></object>
+            </div>
         </div>
-        <div class="column tobuy">
-            <h3 class="column__title title">Купить</h3>
-            <ul>
-                <li>
-                    <input type="checkbox"/>
-                </li>
-                <li>
-                    <input type="checkbox"/>
-                </li>
-                <li>
-                    <input type="checkbox"/>
-                </li>
-                <li>
-                    <input type="checkbox"/>
-                </li>
-                <li>
-                    <input type="checkbox"/>
-                </li>
-                <li>
-                    <input type="checkbox"/>
-                </li>
-                <li>
-                    <input type="checkbox"/>
-                </li>
-            </ul>
-        </div>
-        <div class="column habits">
-            <h3 class="column__title title">Полезные привычки</h3>
-            <ul>
-                <li>
-                    <input type="checkbox"/>
-                </li>
-                <li>
-                    <input type="checkbox"/>
-                </li>
-                <li>
-                    <input type="checkbox"/>
-                </li>
-                <li>
-                    <input type="checkbox"/>
-                </li>
-            </ul>
-        </div>
-        <div class="column water">
-            <span class="title">Вода</span>
-            <object class="water__drop" type="image/svg+xml" data="drop.svg"></object>
-            <object class="water__drop" type="image/svg+xml" data="drop.svg"></object>
-            <object class="water__drop" type="image/svg+xml" data="drop.svg"></object>
-            <object class="water__drop" type="image/svg+xml" data="drop.svg"></object>
-            <object class="water__drop" type="image/svg+xml" data="drop.svg"></object>
-            <object class="water__drop" type="image/svg+xml" data="drop.svg"></object>
-            <object class="water__drop" type="image/svg+xml" data="drop.svg"></object>
-            <object class="water__drop" type="image/svg+xml" data="drop.svg"></object>
-            <object class="water__drop" type="image/svg+xml" data="drop.svg"></object>
-        </div>
+        <footer class="notes">
+            <div class="notes__title title">Заметки</div>
+        </footer>
     </div>
-    <footer class="notes">
-        <div class="notes__title title">Заметки</div>
-    </footer>
 </body>
 </html>
