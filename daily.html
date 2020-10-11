@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Planner</title>
+
+    <style type="text/css">
+
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
+
+        body {
+            background: white;
+            width: 14.8cm;
+            height: 21cm;
+            display: block;
+            margin: 0;
+            padding: 0.5cm;
+            box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+            overflow-y: scroll;
+            box-sizing: border-box;
+        }
+
+        .header{
+            height: 2cm;
+        }
+
+        .container{
+            display: flex;
+            align-items: start;
+            align-content: start;
+            flex-flow: column wrap;
+            justify-content: flex-start;
+            height: 14.5cm;
+        }
+
+        .notes{
+            height: 3.3cm;
+            box-sizing: border-box;        
+            padding: 0.1cm;
+            margin-top:0.5cm;
+            position: relative;
+            border-radius: 0.2cm;
+            border: thin solid #ddd;
+        }
+
+        .title{
+            font-size: 0.8rem;
+            font-weight: 100;
+            font-family: 'Caveat', cursive;
+            text-transform: uppercase;
+        }
+
+        /* HEADER */
+
+        .header__title{
+            width: 5.1cm;
+            margin: 0cm auto;
+            font-size: 3.4rem;
+            font-family: 'Great Vibes', cursive;
+            text-align: center;
+        }
+
+        .date{
+            text-align: center;
+            float: right;
+            width: 3.3cm;
+        }
+
+        .date__row{
+            border-bottom: 1px black solid;
+        }
+
+        .date__space{
+            display: inline-block;
+            width: 0.9cm;
+        }
+
+        .date__dash{
+            display: inline-block;
+            width: 0.1cm;
+        }
+
+        .date__underline{
+            width: 3.3cm;
+            _border-bottom: 1px black solid;
+            font-size: 2rem;
+            line-height: 1rem;
+        }
+
+        .date__days{
+            font-size: 0.6rem;
+        }
+
+        /* MIDDLE SECTION */
+        ul{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        ul li{
+            border-bottom: 1px solid #ddd;
+            line-height: 0.7cm;
+        }
+
+        .column{
+            width: 6.9cm;
+            line-height: 1.2rem;
+        }
+
+        .column .title{
+            padding: 0 0 0 0.2cm;
+        }
+
+        .column__title{
+            
+            background-color: #ddd;
+            padding: 0 0 0 0.2cm;
+            margin: 0;
+        }
+
+        .column hr{
+            border: 0;
+            border-bottom: thin solid #ddd;      
+            margin: 0.7cm 0.2cm 0;
+        }
+
+        .timetable{
+            height: 13.8cm;
+        }
+        .mood{
+            height: 0.7cm;
+        }
+        .mood__face{
+            line-height: 0.68cm;
+            vertical-align: middle;
+            height: 0.68cm;
+            display: inline-block;
+        }
+        .priorities{
+            height: 4.3cm;
+        }
+        .tobuy{
+            height: 5.85cm;
+        }
+        .habits{
+            height: 3.65cm;;
+        }
+        .habits ul li{
+            text-align: right;
+        }
+        .water{
+            height: 0.7cm;
+        }
+        
+        .water .water__drop{
+            display: inline-block;
+            line-height: 0.53cm;
+            vertical-align: middle;
+            height: 0.53cm;
+        }
+
+        /* FOOTER */
+
+        .notes__title{
+            position: absolute;
+            left: 50%;
+            top: -0.4rem;
+            background-color: white;
+            width: 3cm;
+            line-height: 1rem;
+            text-align: center;
+            margin-left: -1.5cm;
+        }
+
+        @media print {
+            size: A5 portrait;
+        }
+
+        @media print {
+            body {
+                margin: 0;
+                padding: 0;
+
+                box-shadow: none;
+                margin: 0;
+                width: auto;
+                height: auto;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <header class="header">
+        <div class="date">
+            <div class="date__row">
+                <div class="date__underline">
+                    <span class="date__space"></span><i class="date__dash">/</i><span class="date__space"></span><i class="date__dash">/</i><span class="date__space"></span>
+                </div>
+            </div>
+            <div class="date__days">SU&nbsp;&nbsp;MO&nbsp;&nbsp;TU&nbsp;&nbsp;WE&nbsp;&nbsp;TH&nbsp;&nbsp;FR&nbsp;&nbsp;SA</div>
+        </div>
+        <h1 class="header__title">My day</h1>
+    </header>
+    <div class="container">
+        <div class="column timetable">
+            <h3 class="column__title title">Расписание</h3>
+            <hr/>
+            <hr/>
+            <hr/>
+            <hr/>
+            <hr/>
+            <hr/>
+            <hr/>
+            <hr/>
+            <hr/>
+            <hr/>
+            <hr/>
+            <hr/>
+            <hr/>
+            <hr/>
+            <hr/>
+            <hr/>
+            <hr/>
+            <hr/>
+        </div>
+        <div class="column mood">
+            <span class="title">Настроение</span>
+            <object class="mood__face" type="image/svg+xml" data="005-relaxed.svg"></object>
+            <object class="mood__face" type="image/svg+xml" data="002-love.svg"></object>
+            <object class="mood__face" type="image/svg+xml" data="003-confused.svg"></object>
+            <object class="mood__face" type="image/svg+xml" data="004-sad.svg"></object>
+            <object class="mood__face" type="image/svg+xml" data="001-swearing.svg"></object>
+            <object class="mood__face" type="image/svg+xml" data="006-crying.svg"></object>
+        </div>
+        <div class="column priorities">
+            <h3 class="column__title title">Приоритеты</h3>
+            <ul>
+                <li>
+                    <input type="checkbox"/>
+                </li>
+                <li>
+                    <input type="checkbox"/>
+                </li>
+                <li>
+                    <input type="checkbox"/>
+                </li>
+                <li>
+                    <input type="checkbox"/>
+                </li>
+                <li>
+                    <input type="checkbox"/>
+                </li>
+            </ul>
+
+        </div>
+        <div class="column tobuy">
+            <h3 class="column__title title">Купить</h3>
+            <ul>
+                <li>
+                    <input type="checkbox"/>
+                </li>
+                <li>
+                    <input type="checkbox"/>
+                </li>
+                <li>
+                    <input type="checkbox"/>
+                </li>
+                <li>
+                    <input type="checkbox"/>
+                </li>
+                <li>
+                    <input type="checkbox"/>
+                </li>
+                <li>
+                    <input type="checkbox"/>
+                </li>
+                <li>
+                    <input type="checkbox"/>
+                </li>
+            </ul>
+        </div>
+        <div class="column habits">
+            <h3 class="column__title title">Полезные привычки</h3>
+            <ul>
+                <li>
+                    <input type="checkbox"/>
+                </li>
+                <li>
+                    <input type="checkbox"/>
+                </li>
+                <li>
+                    <input type="checkbox"/>
+                </li>
+                <li>
+                    <input type="checkbox"/>
+                </li>
+            </ul>
+        </div>
+        <div class="column water">
+            <span class="title">Вода</span>
+            <object class="water__drop" type="image/svg+xml" data="drop.svg"></object>
+            <object class="water__drop" type="image/svg+xml" data="drop.svg"></object>
+            <object class="water__drop" type="image/svg+xml" data="drop.svg"></object>
+            <object class="water__drop" type="image/svg+xml" data="drop.svg"></object>
+            <object class="water__drop" type="image/svg+xml" data="drop.svg"></object>
+            <object class="water__drop" type="image/svg+xml" data="drop.svg"></object>
+            <object class="water__drop" type="image/svg+xml" data="drop.svg"></object>
+            <object class="water__drop" type="image/svg+xml" data="drop.svg"></object>
+            <object class="water__drop" type="image/svg+xml" data="drop.svg"></object>
+        </div>
+    </div>
+    <footer class="notes">
+        <div class="notes__title title">Заметки</div>
+    </footer>
+</body>
+</html>
