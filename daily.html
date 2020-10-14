@@ -31,7 +31,7 @@
             box-sizing: border-box;
         }
 
-        .a5::after {
+        .clearfix::after {
             display: block;
             content: "";
             clear: both;
@@ -95,16 +95,19 @@
         .date__dash{
             display: inline-block;
             width: 0.1cm;
+            vertical-align: bottom;
+            line-height: 0.5cm;
         }
 
         .date__underline{
             width: 3.3cm;
             _border-bottom: 1px black solid;
-            font-size: 2rem;
-            line-height: 1rem;
+            font-size: 1cm;
+            line-height: 1cm;
         }
 
         .date__days{
+            margin-top: 0.1cm;
             font-size: 0.6rem;
         }
 
@@ -222,8 +225,8 @@
 
 </head>
 <body>
-    <div class="a5">
-        <header class="header">
+    <div class="a5 clearfix">
+        <header class="header clearfix">
             <div class="date">
                 <div class="date__row">
                     <div class="date__underline">
