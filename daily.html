@@ -38,6 +38,7 @@
         }
 
         .header{
+            position: relative;
             height: 2cm;
         }
 
@@ -57,7 +58,7 @@
             margin-top:0.3cm;
             position: relative;
             border-radius: 0.2cm;
-            border: thin solid #111;
+            border: thin solid #888;
         }
 
         .title{
@@ -78,13 +79,15 @@
         }
 
         .date{
+            position:absolute;
+            top:0;
+            right:0;
             text-align: center;
-            float: right;
             width: 3.3cm;
         }
 
         .date__row{
-            border-bottom: 1px black solid;
+            border-bottom: 1px #888 solid;
         }
 
         .date__space{
@@ -118,7 +121,7 @@
             list-style: none;
         }
         ul li{
-            border-bottom: 1px solid #111;
+            border-bottom: 1px dashed #888;
             line-height: 0.7cm;
         }
 
@@ -140,7 +143,7 @@
 
         .column hr{
             border: 0;
-            border-bottom: thin solid #111;      
+            border-bottom: thin dashed #888;      
             margin: 0.7cm 0.2cm 0;
         }
 
@@ -226,7 +229,7 @@
 </head>
 <body>
     <div class="a5 clearfix">
-        <header class="header clearfix">
+        <header class="header">
             <div class="date">
                 <div class="date__row">
                     <div class="date__underline">
