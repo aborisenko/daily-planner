@@ -45,10 +45,10 @@
         }
 
         .notes{
-            height: 3.3cm;
+            height: 3.1cm;
             box-sizing: border-box;        
             padding: 0.1cm;
-            margin-top:0.5cm;
+            margin-top:0.4cm;
             position: relative;
             border-radius: 0.2cm;
             border: thin solid #ddd;
@@ -195,6 +195,7 @@
 
             .a5{
                 box-shadow: none;
+                page-break-after: always;
             }
 
             body {
@@ -210,6 +211,131 @@
 
 </head>
 <body>
+    <div class="a5">
+        <header class="header">
+            <div class="date">
+                <div class="date__row">
+                    <div class="date__underline">
+                        <span class="date__space"></span><i class="date__dash">/</i><span class="date__space"></span><i class="date__dash">/</i><span class="date__space"></span>
+                    </div>
+                </div>
+                <div class="date__days">SU&nbsp;&nbsp;MO&nbsp;&nbsp;TU&nbsp;&nbsp;WE&nbsp;&nbsp;TH&nbsp;&nbsp;FR&nbsp;&nbsp;SA</div>
+            </div>
+            <h1 class="header__title">My day</h1>
+        </header>
+        <div class="container">
+            <div class="column timetable">
+                <h3 class="column__title title">Расписание</h3>
+                <hr/>
+                <hr/>
+                <hr/>
+                <hr/>
+                <hr/>
+                <hr/>
+                <hr/>
+                <hr/>
+                <hr/>
+                <hr/>
+                <hr/>
+                <hr/>
+                <hr/>
+                <hr/>
+                <hr/>
+                <hr/>
+                <hr/>
+                <hr/>
+            </div>
+            <div class="column mood">
+                <span class="title">Настроение</span>
+                <object class="mood__face" type="image/svg+xml" data="005-relaxed.svg"></object>
+                <object class="mood__face" type="image/svg+xml" data="002-love.svg"></object>
+                <object class="mood__face" type="image/svg+xml" data="003-confused.svg"></object>
+                <object class="mood__face" type="image/svg+xml" data="004-sad.svg"></object>
+                <object class="mood__face" type="image/svg+xml" data="001-swearing.svg"></object>
+                <object class="mood__face" type="image/svg+xml" data="006-crying.svg"></object>
+            </div>
+            <div class="column priorities">
+                <h3 class="column__title title">Приоритеты</h3>
+                <ul>
+                    <li>
+                        <input type="checkbox"/>
+                    </li>
+                    <li>
+                        <input type="checkbox"/>
+                    </li>
+                    <li>
+                        <input type="checkbox"/>
+                    </li>
+                    <li>
+                        <input type="checkbox"/>
+                    </li>
+                    <li>
+                        <input type="checkbox"/>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="column tobuy">
+                <h3 class="column__title title">Купить</h3>
+                <ul>
+                    <li>
+                        <input type="checkbox"/>
+                    </li>
+                    <li>
+                        <input type="checkbox"/>
+                    </li>
+                    <li>
+                        <input type="checkbox"/>
+                    </li>
+                    <li>
+                        <input type="checkbox"/>
+                    </li>
+                    <li>
+                        <input type="checkbox"/>
+                    </li>
+                    <li>
+                        <input type="checkbox"/>
+                    </li>
+                    <li>
+                        <input type="checkbox"/>
+                    </li>
+                </ul>
+            </div>
+            <div class="column habits">
+                <h3 class="column__title title">Полезные привычки</h3>
+                <ul>
+                    <li>
+                        <input type="checkbox"/>
+                    </li>
+                    <li>
+                        <input type="checkbox"/>
+                    </li>
+                    <li>
+                        <input type="checkbox"/>
+                    </li>
+                    <li>
+                        <input type="checkbox"/>
+                    </li>
+                </ul>
+            </div>
+            <div class="column water">
+                <span class="title">Вода</span>
+                <object class="water__drop" type="image/svg+xml" data="drop.svg"></object>
+                <object class="water__drop" type="image/svg+xml" data="drop.svg"></object>
+                <object class="water__drop" type="image/svg+xml" data="drop.svg"></object>
+                <object class="water__drop" type="image/svg+xml" data="drop.svg"></object>
+                <object class="water__drop" type="image/svg+xml" data="drop.svg"></object>
+                <object class="water__drop" type="image/svg+xml" data="drop.svg"></object>
+                <object class="water__drop" type="image/svg+xml" data="drop.svg"></object>
+                <object class="water__drop" type="image/svg+xml" data="drop.svg"></object>
+                <object class="water__drop" type="image/svg+xml" data="drop.svg"></object>
+            </div>
+        </div>
+        <footer class="notes">
+            <div class="notes__title title">Заметки</div>
+        </footer>
+    </div>
+
     <div class="a5">
         <header class="header">
             <div class="date">
